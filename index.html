@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAREZ</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="home">
+
+        <div class="section1">
+            <div class="sec1_1">
+                <div class="logo">
+                    <p>YAREZ</p>
+                </div>
+            </div>
+
+            <div class="sec1_2">
+                <div class="galery">
+                    <div class="gtext1"><figcaption>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</figcaption></div>
+                    <div class="work slider">
+                       <img src="image/1.png" class="active" alt="" loading="eager">
+                       <img src="image/2.png" alt="" loading="eager">
+                       <img src="image/3.png" alt="" loading="eager">
+                    </div>
+                    <div class="gtext2"><figcaption>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</figcaption></div>
+                </div>
+            </div>
+
+            <div class="futer"></div>
+        </div>
+
+
+
+        <div class="section2">
+            <div class="sec2_1">
+                <div class="heder1">
+                    <div class="mlogo">
+                        <p>YAREZ</p>
+                    </div>
+
+                    <div class="decor">
+                        <figcaption>IDX-01</figcaption>
+                    </div>
+                </div>
+
+                <div class="heder2">
+                    <div class="links">
+                        <a>SHOP</a>
+                        <a>CONTACT</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sec2_2">
+                <div class="content">
+                    <h1>CONTROL UNDER PRESSURE</h1>
+                    <h3 style="padding-bottom: 1rem;">Lorem Ipsum is simply dummy text</h3>
+                    <p style="padding-bottom: 1rem;">My job is to convey ideas in a visual way. For the message to be convincing, information must be well organized. The goal of graphic design is to find innovative ways to organize, making ideas fresh and original.</p>
+                    <p style="padding-bottom: 1rem;">The focus of my work is on typography and layout – the way fonts, space, and elements create atmosphere. I am particularly inspired by the Swiss International style from the 70s, experimental typography, and minimalism.</p>
+                    <p style="padding-bottom: 1rem;">Write to me – I look forward to working with you!</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+const slides = document.querySelectorAll('.slider img');
+
+let current = 0;
+let interval;
+
+function showNext(){
+    slides[current].classList.remove('active');
+
+    current = (current + 1) % slides.length;
+
+    slides[current].classList.add('active');
+}
+
+function startSlider(){
+    interval = setInterval(showNext, 1000);
+}
+
+function stopSlider(){
+    clearInterval(interval);
+}
+
+const slider = document.querySelector('.slider');
+
+// desktop hover
+slider.addEventListener('mouseenter', stopSlider);
+slider.addEventListener('mouseleave', startSlider);
+
+// telefon (dodir zadržava)
+slider.addEventListener('touchstart', stopSlider);
+slider.addEventListener('touchend', startSlider);
+slider.addEventListener('touchcancel', startSlider);
+
+startSlider();
+</script>
+
+</body>
+</html>

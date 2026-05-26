@@ -1,0 +1,403 @@
+@font-face {
+  font-family: 'Literatura';
+  src: url('./fonts/LiteraturaPastRegular.woff') format('woff'),
+       url('./fonts/LiteraturaPastRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kommuna';
+  src: url('./fonts/KommunaNormal1.10.woff') format('woff'),
+       url('./fonts/KommunaNormal1.10.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KommunaBold';
+  src: url('./fonts/KommunaNormalBold1.10.woff') format('woff'),
+       url('./fonts/KommunaNormalBold1.10.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KommunaBlack';
+  src: url('./fonts/KommunaNormalBlack1.10.woff') format('woff'),
+       url('./fonts/KommunaNormalBlack1.10.otf') format('opentype');
+  font-weight: 900; /* 900 je uobičajena vrednost za 'black' težinu */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KommunaNarrow';
+  src: url('./fonts/KommunaNarrow1.10.woff') format('woff'),
+       url('./fonts/KommunaNarrow1.10.otf') format('opentype');
+  font-weight: 900; /* 900 je uobičajena vrednost za 'black' težinu */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KommunaUltraNarrow';
+  src: url('./fonts/KommunaUltraNarrow1.10.woff') format('woff'),
+       url('./fonts/KommunaUltraNarrow1.10.otf') format('opentype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GramatikaRegular';
+  src: url('./fonts/GramatikaRegular1.00.woff') format('woff'),
+       url('./fonts/GramatikaRegular1.00.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GramatikaBold';
+  src: url('./fonts/GramatikaBold1.00.woff') format('woff'),
+       url('./fonts/GramatikaBold1.00.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;}
+
+  @font-face {
+    font-family: 'GramatikaShifted';
+    src: url('./fonts/GramatikaShifted1.00.woff') format('woff'),
+         url('./fonts/GramatikaShifted1.00.woff') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'GramatikaBoldShifted';
+    src: url('./fonts/GramatikaBoldShifted1.00.woff') format('woff'),
+         url('./fonts/GramatikaBoldShifted1.00.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  
+@font-face {
+  font-family: 'Farmacia';
+  src: url('./fonts/NG-Farmacia-TRIAL.woff2') format('woff'),
+       url('./fonts/NG-Farmacia-TRIAL.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+  *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  
+}
+
+html {
+  font-size: 150%;
+  line-height: 1.5;
+  background: #ffffff;
+  color: #333333;
+ 
+
+}
+
+
+h1 {
+  font-family: KommunaUltraNarrow;
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 1;
+  
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-family: Gramatikaregular;
+  font-weight: 400;
+  
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: KommunaBlack;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  font-family: Gramatikaregular;
+  font-weight: 400;
+}
+
+/* Basic/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.home {
+  
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Osigurava da imamo 2 kolone */
+  min-height: 100vh;
+}
+
+.section1 {
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  border-right: solid 1px #030303;
+  
+
+  
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    background-color: #030303;
+    color: #ffffff;
+}
+
+.galery {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+}
+
+.gtext1,
+.gtext2 {
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.gtext1 figcaption,
+.gtext2 figcaption {
+    max-width: 70%;
+}
+
+a {
+  font-family: Gramatika;
+  font-size: 1rem;
+  font-weight: 900;
+  -webkit-text-stroke: 1px black;
+    color: transparent;
+}
+
+
+/* Slider/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.slider{
+    position: relative;
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.slider img{
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain; /* ili cover */
+    
+    opacity: 0;
+    transition: opacity .5s, ease-in-out;
+}
+
+.slider img.active{
+    opacity: 1;
+}
+
+.slider img.active{
+    opacity:1;
+}
+
+/* Slider/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+.section2 {
+  width: 100%;
+}
+
+
+.sec2_1 {
+  width: 100%;
+  height: 60px;
+  border-bottom: solid 1px #1c1c1c;
+}
+
+.sec2_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+
+.mlogo {
+    display: none;
+}
+
+.decor {
+    display: block;
+}
+
+.sec2_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  margin-top: 10%;
+}
+
+
+
+
+
+
+ 
+
+/*/MEDIA//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 1600px) {
+  html {
+    font-size: 140%;
+  }
+
+}
+
+@media screen and (min-width: 1280px) {
+ 
+
+  
+}
+
+
+
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 130%;
+  }
+
+ 
+
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  html {
+    font-size: 120%;
+  }
+
+   
+
+  
+
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  .section1 {
+    height: auto;
+    display: block;
+    border-right: none;
+}
+
+  .section2 {
+    order: -1;
+    padding: 0; /* BITNO: uklanjamo padding koji krati border */
+  }
+
+  .sec2_1 {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #1c1c1c;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 1rem; /* OVDE ide prostor umesto sectiona */
+  }
+
+  .sec2_2{
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  /* logo desktop/mobile swap */
+  .logo {
+    display: none;
+  }
+
+  .mlogo {
+    display: block; 
+  }
+
+  .decor {
+    display: none;
+  }
+
+}
+  
+  
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 110%;
+  }
+
+  
+
+  
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+
+
+
+
+
+
+
