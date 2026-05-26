@@ -111,7 +111,7 @@ html {
   font-size: 150%;
   line-height: 1.5;
   background: #ffffff;
-  color: #333333;
+  color: #414141;
  
 
 }
@@ -383,6 +383,10 @@ a {
     font-size: 110%;
   }
 
+  .slider{
+    width: 90%;
+}
+
   
 
   
@@ -391,6 +395,12 @@ a {
 @media screen and (max-width: 640px) {
   html {
     font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 90%;
   }
 }
 
