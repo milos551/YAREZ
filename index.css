@@ -129,8 +129,6 @@
 html {
   font-size: 150%;
   line-height: 1;
-  background: var(--bg);
-color: var(--text);
  
 
 }
@@ -417,6 +415,7 @@ footer p{
 
   header{
     padding: 2rem 0;
+    border-bottom: dotted 1px #000;
   }
 
   .con11{
@@ -466,12 +465,22 @@ footer p{
 
 
 
+.con22{
+  border-left: none;
+  border-top: dotted 1px #000;
+}
+
+
+
+
+
 
 
 footer{
    padding: 1rem 0;
    align-items: baseline;
    justify-content: center;
+   border-top: dotted 1px #000;
 }
 
 
