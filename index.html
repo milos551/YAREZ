@@ -9,19 +9,36 @@
 <body>
 
     <div class="home">
+        <header>
+            <div class="logo">
+                <p>YAREZ</p>
+            </div>
 
-        <div class="section1">
-            <div class="sec1_1">
-                <div class="logo">
-                    <p>YAREZ</p>
+            <div class="shop">
+                <a href="#">SHOP</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="con1">
+                <div class="con11">
+                    <h1>Experimental Typography</h1>
+                    <h3 style="padding-bottom: 1rem; padding-top: 1rem;">Visual research through typography, repetition, and spatial composition</h3>
+                    <p style="padding-bottom: 1rem;">My practice focuses on experimental typography and contemporary visual communication.
+                        Through modular systems and controlled compositions, the work examines tension between readability and abstraction.</p>
+                    <p style="padding-bottom: 1rem;">Available for commissions, collaborations, and independent projects.</p>
+                    <figcaption style="padding-bottom: 2rem;">Working through modular systems,typographic constraints,
+                and iterative visual methods.</figcaption>
+                    <a href="#">yarezprint@gmail.com</a>
                 </div>
             </div>
 
-            <div class="sec1_2">
-                <div class="galery">
-                    <div class="gtext1"><h3>Selected Typographic Structures</h3></div>
+            <div class="con2">
+                <div class="con22">
+                    <div class="galery">
+                    <!-- <div class="gtext1"><h3>Selected Typographic Structures</h3></div> -->
                     <div class="work slider">
-                       <img src="image/1.png" class="active" alt="" loading="eager">
+                       <img src="image/1.jpg" class="active" alt="" loading="eager">
                        <img src="image/2.png" alt="" loading="eager">
                        <img src="image/3.png" alt="" loading="eager">
                        <img src="image/4.png" alt="" loading="eager">
@@ -30,57 +47,17 @@
 
                     <div class="counter">
                        <figcaption id="slide-counter">01 / 05</figcaption></div>
-                    <div class="gtext2"><figcaption>A series of experimental compositions exploring control, interruption, repetition, and institutional visual language.</figcaption></div>
+                    <div class="gtext2"><figcaption>A series of experimental compositions exploring control, and institutional visual language.</figcaption></div>
                 </div>
-            </div>
-
-            <div class="futer">
-                
-                <figcaption>Belgrade, Serbia</figcaption>
-                <figcaption>Copyright © All Rights Reserved.</figcaption>
+                </div>
             </div>
         </div>
 
-
-
-        <div class="section2">
-            <div class="sec2_1">
-                <div class="heder1">
-                    <div class="mlogo">
-                        <p>YAREZ</p>
-                    </div>
-
-                    <div class="decor">
-                        <a id="themeTrigger">
-                           <figcaption>IDX-01</figcaption>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="heder2">
-                    <div class="links">
-                        <a>SHOP</a>
-                        <a>CONTACT</a>
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="sec2_2">
-                <div class="content">
-                    <h1>Experimental Typography and the Fragmentation of Language </h1>
-                    <h3 style="padding-bottom: 1rem; padding-top: 1rem;">Visual research through typography, repetition, and spatial composition</h3>
-                    <p style="padding-bottom: 1rem;">My practice focuses on experimental typography and contemporary visual communication.
-Through modular systems and controlled compositions, the work examines tension between readability and abstraction.</p>
-                    <p style="padding-bottom: 1rem;">Available for commissions, collaborations, and independent projects.</p>
-                    
-                    
-                </div>
-            </div>
-
-        </div>
-
+        <footer>
+            <P>Copyright © All Rights Reserved</P>
+        </footer>
     </div>
+
 
 
     <script>
@@ -134,27 +111,10 @@ slider.addEventListener('touchcancel', startSlider);
 updateCounter();
 startSlider();
 </script>
+   
 
-<script>
 
-const trigger = document.getElementById('themeTrigger');
-const root = document.documentElement;
 
-trigger.addEventListener('mouseenter', () => {
-
-    root.style.setProperty('--bg', '#0000FF');
-    root.style.setProperty('--text', '#030303');
-
-});
-
-trigger.addEventListener('mouseleave', () => {
-
-    root.style.setProperty('--bg', '#ffffff');
-    root.style.setProperty('--text', '#030303');
-
-});
-
-</script>
 
 </body>
 </html>
