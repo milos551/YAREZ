@@ -78,6 +78,14 @@
   font-display: swap;}
 
   @font-face {
+  font-family: 'GramatikaSlanted';
+  src: url('./fonts/GramatikaSlanted1.00.woff') format('woff'),
+       url('./fonts/GramatikaSlanted1.00.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;}
+
+  @font-face {
     font-family: 'GramatikaShifted';
     src: url('./fonts/GramatikaShifted1.00.woff') format('woff'),
          url('./fonts/GramatikaShifted1.00.woff') format('opentype');
@@ -105,13 +113,7 @@
   font-display: swap;
 }
 
-:root {
-  --bg: #ffffff;
-  --text: #030303;
 
-  --hover-bg: #0000FF;
-  --hover-text: #030303;
-}
 
   *,
 *::after,
@@ -125,8 +127,8 @@
 }
 
 html {
-  font-size: 130%;
-  line-height: 1.5;
+  font-size: 150%;
+  line-height: 1;
   background: var(--bg);
 color: var(--text);
  
@@ -136,29 +138,32 @@ color: var(--text);
 
 h1 {
   font-family: KommunaUltraNarrow;
-  font-size: 7rem;
+  font-size: 4rem;
   font-weight: 400;
-  line-height: 0.8;
+  line-height: 0.9;
+    text-transform: uppercase;
   
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  font-family: KommunaBold;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: KommunaUltraNarrow;
 }
 
 h3 {
   font-size: 1.35rem;
-  font-family: GramatikaBold;
+  font-family: GramatikaSlanted;
   font-weight: 400;
+  line-height: 1;
   
 }
 
 p {
   font-size: 1rem;
   font-weight: 400;
-  font-family: KommunaBold;
+  font-family: Gramatika;
+  line-height: 1;
 }
 
 figcaption {
@@ -168,89 +173,113 @@ figcaption {
 }
 
 a {
+  font-family: 'Gramatika';
   color: var(--text);
 }
 
 /* Basic/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.home {
-  
-  margin: 0 auto;
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100dvh;
+  padding: 0 5%;
+
+}
+
+
+
+/* heder/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+header{
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+
+/* heder/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+/* CONTENT/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.content{
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Osigurava da imamo 2 kolone */
-  min-height: 100vh;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  gap: 2rem;
 }
 
-.section1 {
- 
-  display: grid;
-  
-  gap: 1rem;
-  border-right: solid 1px #030303;
-  border-color: var(--text);
-  
-
-  
+.con11 a{
+  padding-block: 1rem;
+  font-size: 0.8rem;
+  text-decoration: underline;
 }
 
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 60px;
-    background-color: var(--text);
-  color: var(--bg);
+
+.con11 h1 {
+  position: relative;
+  padding-bottom: 1rem;
 }
 
-.galery {
-    display: grid;
-    place-items: center;
-    gap: 1rem;
-}
+.con11 h1::after {
+  content: "";
 
-.galery {
-    display: grid;
-    place-items: center;
-    gap: 1.5rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
 
-    width: 100%;
-    padding: 2rem 0;
+  transform: translateX(-50%);
 
-    
-    border-bottom: 1px solid #030303;
-    border-color: var(--text);
-}
-
-.gtext1,
-.gtext2 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.gtext1 h3,
-.gtext2 figcaption {
-    max-width: 70%;
-    line-height: 1.4;
-}
-
-.futer figcaption {
   width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: center;
+
+  border-bottom: 1px dotted #000000;
 }
 
-a {
-  font-family: Gramatika;
-  font-size: 1rem;
-  font-weight: 900;
-  
-    color: var(--text);
+
+.con11{
+  max-width: 650px; 
+ text-align: left;
 }
+
+.con11 figcaption{
+  position: relative;
+  padding-top: 1rem;
+}
+
+.con11 figcaption::before {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  top: 0;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  border-bottom: 1px dotted #000000;
+}
+
+
+/* CONTENT/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
 
 
 /* Slider/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -293,61 +322,53 @@ a {
 
 
 
+.con22{
+  border-left: dotted 1px #000;
+}
 
-.section2 {
-  width: 100%;
+.galery {
+    padding: 4rem 0;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+
+    width: 100%;
+}
+
+.gtext1,
+.gtext2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.gtext1 h3,
+.gtext2 figcaption {
+    max-width: 70%;
 }
 
 
-.sec2_1 {
-  width: 100%;
-  height: 60px;
-  border-bottom: solid 1px #1c1c1c;
-  border-color: var(--text);
-}
 
-.sec2_1 {
+
+/* futer/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+footer{
+   height: 15%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  padding: 0 5%;
-}
-
-.links {
-  display: flex;
-  gap: 1rem;
-  color: var(--text);
-}
-
-
-.mlogo {
-    display: none;
-}
-
-.decor {
-    display: block;
-    color: var(--text);
-}
-
-
-
-.sec2_2 {
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
-  margin-top: 15%;
-  text-align: center;
-}
-
-.sec2_2 h1,h3,p {
   
+
+}
+
+footer p{
+  font-size: 0.7rem;
 }
 
 
 
-
+/* futer/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
  
@@ -384,60 +405,85 @@ a {
 
   html {
     font-size: 120%;
+
+  
   }
+
+  .content{
+    height: auto;
+  grid-template-columns: 1fr;
+  border-top: 5rem;
+}
+
+  header{
+    padding: 2rem 0;
+  }
+
+  .con11{
+    margin-top: 4rem;
+  max-width: 100%; 
+ text-align: center;
+ 
+}
+
+.con11 h1 {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.con11 h1::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  width: 50%;
+
+  border-bottom: 1px dotted #000000;
+}
+
+.con11 figcaption{
+  position: relative;
+  padding-top: 1rem;
+}
+
+.con11 figcaption::before {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  top: 0;
+
+  transform: translateX(-50%);
+
+  width: 50%;
+
+  border-bottom: 1px dotted #000000;
+}
+
+
+
+
+
+footer{
+   padding: 1rem 0;
+   align-items: baseline;
+   justify-content: center;
+}
+
+
+
+
+
+}
 
    
 
   
 
-  .home {
-    grid-template-columns: 1fr;
-  }
-
-  .section1 {
-    height: auto;
-    display: block;
-    border-right: none;
-}
-
-  .section2 {
-    order: -1;
-    padding: 0; /* BITNO: uklanjamo padding koji krati border */
-  }
-
-  .sec2_1 {
-    width: 100%;
-    height: 60px;
-    border-bottom: 1px solid #1c1c1c;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 1rem; /* OVDE ide prostor umesto sectiona */
-  }
-
-  .sec2_2{
-    width: 100%;
-    padding: 0 1rem;
-    text-align: center;
-  }
-
-  /* logo desktop/mobile swap */
-  .logo {
-    display: none;
-  }
-
-  .mlogo {
-    display: block; 
-  }
-
-  .decor {
-    display: none;
-  }
-
-}
-  
   
 
 @media screen and (max-width: 768px) {
@@ -445,10 +491,7 @@ a {
     font-size: 110%;
   }
 
-  .slider{
-    width: 90%;
-}
-
+ 
   
 
   
@@ -465,11 +508,3 @@ a {
     font-size: 90%;
   }
 }
-
-
-
-
-
-
-
-
