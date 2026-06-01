@@ -36,22 +36,28 @@
             <div class="con2">
                 <div class="con22">
                     <div class="galery">
-                    <!-- <div class="gtext1"><h3>Selected Typographic Structures</h3></div> -->
+                    <div class="gtext1">
+                        <figcaption id="slide-index">IDX01</figcaption>
+                    </div> 
                     <div class="work slider">
-                       <img src="image/1.jpg" class="active" alt="" loading="eager">
-                       <img src="image/2.png" alt="" loading="eager">
-                       <img src="image/3.png" alt="" loading="eager">
-                       <img src="image/4.png" alt="" loading="eager">
-                       <img src="image/5.png" alt="" loading="eager">
+                         <img src="image/1.jpg" class="active" alt="" loading="eager">
+                         <img src="image/2.png" alt="" loading="eager">
+                         <img src="image/3.png" alt="" loading="eager">
+                         <img src="image/4.png" alt="" loading="eager">
+                         <img src="image/5.png" alt="" loading="eager">
                     </div>
 
-                    <div class="counter">
-                       <figcaption id="slide-counter">01 / 05</figcaption></div>
-                    <div class="gtext2"><figcaption>A series of experimental compositions exploring control, and institutional visual language.</figcaption></div>
-                </div>
+                    <div class="gtext2">
+                         <figcaption id="slide-title">naslov</figcaption>
+                    </div>
+                    <div class="controls">
+                        <button id="prev-slide"></button>
+                        <button id="next-slide"></button>
+                    </div>
                 </div>
             </div>
-        </div>
+            </div>
+            </div>
 
         <footer>
             <P>Copyright © All Rights Reserved</P>
@@ -61,55 +67,106 @@
 
 
     <script>
-const slides = document.querySelectorAll('.slider img');
-const counter = document.getElementById('slide-counter');
-function updateCounter() {
 
-    const currentNumber =
-        String(current + 1).padStart(2, '0');
+const slides =
+document.querySelectorAll('.slider img');
 
-    const totalNumber =
-        String(slides.length).padStart(2, '0');
+const nextBtn =
+document.getElementById('next-slide');
 
-    counter.textContent =
-        `${currentNumber} / ${totalNumber}`;
-}
+const prevBtn =
+document.getElementById('prev-slide');
+
+const slideIndex =
+document.getElementById('slide-index');
+
+const slideTitle =
+document.getElementById('slide-title');
 
 let current = 0;
-let interval;
 
-function showNext(){
+/* PODACI ZA SVAKU SLIKU */
 
-    slides[current].classList.remove('active');
+const slideData = [
 
-    current = (current + 1) % slides.length;
+    {
+        index: 'IDX01',
+        title: 'CONTROL UNDER PRESSURE'
+    },
 
-    slides[current].classList.add('active');
+    {
+        index: 'IDX02',
+        title: 'REACTION IS INTERRUPTED'
+    },
 
-    updateCounter();
+    {
+        index: 'IDX03',
+        title: 'STATUS PRECEDES RULES'
+    },
+
+    {
+        index: 'IDX04',
+        title: 'REPETITION PRODUCES BELIEF'
+    },
+
+    {
+        index: 'IDX05',
+        title: 'VALUE INCREASES WITH DISTANCE'
+    }
+
+];
+
+function updateContent(){
+
+    slideIndex.textContent =
+        slideData[current].index;
+
+    slideTitle.textContent =
+        slideData[current].title;
 }
 
-function startSlider(){
-    interval = setInterval(showNext, 1000);
+function showSlide(index){
+
+    slides[current]
+        .classList.remove('active');
+
+    current = index;
+
+    slides[current]
+        .classList.add('active');
+
+    updateContent();
 }
 
-function stopSlider(){
-    clearInterval(interval);
+function nextSlide(){
+
+    let next =
+        (current + 1) % slides.length;
+
+    showSlide(next);
 }
 
-const slider = document.querySelector('.slider');
+function prevSlide(){
 
-// desktop hover
-slider.addEventListener('mouseenter', stopSlider);
-slider.addEventListener('mouseleave', startSlider);
+    let prev =
+        (current - 1 + slides.length)
+        % slides.length;
 
-// telefon (dodir zadržava)
-slider.addEventListener('touchstart', stopSlider);
-slider.addEventListener('touchend', startSlider);
-slider.addEventListener('touchcancel', startSlider);
+    showSlide(prev);
+}
 
-updateCounter();
-startSlider();
+nextBtn.addEventListener(
+    'click',
+    nextSlide
+);
+
+prevBtn.addEventListener(
+    'click',
+    prevSlide
+);
+
+updateContent();
+
 </script>
    
 
