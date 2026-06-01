@@ -127,7 +127,7 @@
 }
 
 html {
-  font-size: 150%;
+  font-size: 140%;
   line-height: 1;
  
 
@@ -177,12 +177,20 @@ a {
 
 /* Basic/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+body{
+  background-color: #EEEFEE;
+}
+
 .home{
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100dvh;
   padding: 0 5%;
+  background-color: #fff;
+  color: #363636;
 
 }
 
@@ -280,15 +288,21 @@ header{
 
 
 
-/* Slider/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+
+
+/* SLIDER ////////////////////////////////////////////////////// */
 
 .slider{
     position: relative;
+
     width: 70%;
     aspect-ratio: 1 / 1;
+
     overflow: hidden;
 }
+
+/* slike */
 
 .slider img{
     position: absolute;
@@ -297,23 +311,52 @@ header{
     width: 100%;
     height: 100%;
 
-    object-fit: contain; /* ili cover */
-    
+    object-fit: contain;
+
     opacity: 0;
-    transition: opacity .5s, ease-in-out;
+
+    transition: opacity .5s ease-in-out;
 }
+
+/* aktivna slika */
 
 .slider img.active{
     opacity: 1;
 }
 
-.slider img.active{
-    opacity:1;
+/* CONTROLS ////////////////////////////////////////////////////// */
+
+.controls{
+
+    width: 70%;
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
-.counter figcaption {
-    font-family: Kommuna;
-    letter-spacing: 0.1em;
+/* dugmad */
+
+.controls button{
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    font-family: Gramatika;
+    font-size: 1rem;
+
+    color: #030303;
+
+    transition: opacity .2s ease;
+}
+
+/* hover */
+
+.controls button:hover{
+    opacity: .5;
 }
 
 /* Slider/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -333,7 +376,14 @@ header{
     width: 100%;
 }
 
-.gtext1,
+.gtext1 {
+    width: 70%;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+
+
 .gtext2 {
     width: 100%;
     display: flex;
@@ -468,6 +518,13 @@ footer p{
 .con22{
   border-left: none;
   border-top: dotted 1px #000;
+}
+
+.gtext1 {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 
