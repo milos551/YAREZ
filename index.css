@@ -146,7 +146,7 @@ h1 {
 h2 {
   font-size: 3rem;
   font-weight: 400;
-  font-family: KommunaUltraNarrow;
+  font-family: Gramatika;
 }
 
 h3 {
@@ -171,9 +171,18 @@ figcaption {
 }
 
 a {
-  font-family: 'Gramatika';
-  color: var(--text);
+  font-family: 'GramatikaRegular';
+
 }
+
+.shop a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
 
 /* Basic/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -194,6 +203,17 @@ body{
 
 }
 
+.home2{
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 5%;
+  background-color: #fff;
+  color: #363636;
+
+}
 
 
 /* heder/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -209,9 +229,86 @@ header{
 
 
 
+
+
+
+
 /* heder/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+/* SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP SHOP/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.shop{
+  padding: 3rem 0;
+}
 
+.shop_desc{
+  padding: 2rem 0;
+  width: 50%;
+}
+
+.shop_gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 1024px){
+    .shop_gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .shop_gallery{
+        grid-template-columns: 1fr;
+    }
+}
+
+.card{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card_info{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.card h2{
+    font-size:18px;
+    font-weight:500;
+    margin:0;
+}
+
+.edition{
+    font-size:14px;
+    opacity:.7;
+    margin:0;
+}
+
+.price{
+    font-size:16px;
+    margin:8px 0 0;
+}
+
+.buy_btn{
+    display:inline-block;
+    margin-top:8px;
+    text-decoration:none;
+    border-bottom:1px solid currentColor;
+    width:max-content;
+}
+
+.card h2{
+  font-size: 1rem;
+  font-family: Gramatika;
+}
 
 
 /* CONTENT/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -419,6 +516,9 @@ footer p{
 /* futer/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
+
+
+
  
 
 /*/MEDIA//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -466,6 +566,14 @@ footer p{
   header{
     padding: 2rem 0;
     border-bottom: dotted 1px #000;
+    align-items: baseline;
+  }
+
+  .shop{
+
+    padding: 0 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .con11{
@@ -540,6 +648,10 @@ footer{
    border-top: dotted 1px #000;
 }
 
+.shop_desc{
+  width: 100%;
+  text-align: center;
+}
 
 
 
